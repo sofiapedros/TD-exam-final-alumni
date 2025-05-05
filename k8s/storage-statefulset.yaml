@@ -39,8 +39,8 @@ kind: Service
 metadata:
   name: storage
 spec:
-  clusterIP:  34.118.224.0
+  clusterIP: 34.118.224.1
   selector:
-    app: python-app
+    app: web
   ports:
     - port: 3000
