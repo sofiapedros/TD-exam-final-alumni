@@ -37,17 +37,18 @@ spec:
 ---
 # Sé que hay que crear el disco, pero luego no sé atachearlo. Porque a lo mejor podría usar el que está en el cluster,
 # pero es que no sé referenciarlo
-apiVersion: v1
-kind: StorageClass
-metadata:
-  - name: emptydir
-spec:
-  storageClassName: emptydir
-  accessModes: ["ReadWriteOnce"]
-  resources:
-    requests:
-      storage: 1Gi
+# apiVersion: v1
+# kind: StorageClass
+# metadata:
+#   - name: emptydir
+# spec:
+#   storageClassName: emptydir
+#   accessModes: ["ReadWriteOnce"]
+#   resources:
+#     requests:
+#       storage: 1Gi
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
