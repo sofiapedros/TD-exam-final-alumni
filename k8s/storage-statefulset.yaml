@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: 
+  name: my-storage
 spec:
-  serviceName: ""
+  serviceName: "my-service"
   updateStrategy:
     type: RollingUpdate
-  replicas: 
+  replicas: 2
   selector:
     matchLabels:
-      app: 
+      app: web
   template:
     metadata:
       labels:
-        app: 
+        app: web
     spec:
       containers:
-        - name: 
-          image: gcr.io/icai2025/storage:latest
-          imagePullPolicy: 
+        - name: my-container
+          image: gcr.io/icai2025-456716/storage:latest
+          imagePullPolicy: Always
           ports:
-            - containerPort: 
+            - containerPort: 3000
           volumeMounts:
-            - name: 
-              mountPath: 
+            - name: GKEVolume
+              mountPath: /var/storage/
   volumeClaimTemplates:
     - metadata:
         name: storage-volume
       spec:
-        storageClassName: 
+        storageClassName: GKEVolume
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
@@ -39,8 +39,8 @@ kind: Service
 metadata:
   name: storage
 spec:
-  clusterIP: 
+  clusterIP: my-service
   selector:
-    app: 
+    app: python-app
   ports:
-    - port: 
+    - port: 3000
