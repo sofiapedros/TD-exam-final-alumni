@@ -55,6 +55,7 @@ metadata:
   name: my-storage
 spec:
   clusterIP:  34.72.133.148
+  # clusterIP: 34.118.224.5
   selector:
     app: web
   ports:
