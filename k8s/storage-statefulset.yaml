@@ -28,7 +28,7 @@ spec:
     - metadata:
         name: storage-volume
       spec:
-        storageClassName: gke-sofia-cluster-sofia-cluster-node--b8b41eb4-6c1m
+        storageClassName: emptydir
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
