@@ -16,14 +16,14 @@ spec:
         app: web
     spec:
       containers:
-        - name: my-container
+        - name: web
           image: gcr.io/icai2025-456716/storage:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
           volumeMounts:
             - name: my-storage
-              mountPath: /data/storage
+              mountPath: /data/storage/
   volumeClaimTemplates:
     - metadata:
         name: my-storage
