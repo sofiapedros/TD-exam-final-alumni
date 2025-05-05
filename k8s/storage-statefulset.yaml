@@ -28,7 +28,7 @@ spec:
     - metadata:
         name: storage-volume
       spec:
-        storageClassName: GKEVolume
+        storageClassName: emptydir
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
