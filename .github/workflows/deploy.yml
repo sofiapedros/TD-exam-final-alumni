@@ -7,7 +7,8 @@ on:
 
 env:
   PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
-  IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID}}/python-app
+  IMAGE_NAME_WEB: gcr.io/${{ secrets.GCP_PROJECT_ID}}/web
+  IMAGE_NAME_STORAGE: gcr.io/${{ secrets.GCP_PROJECT_ID}}/storage
   GKE_CLUSTER: ${{ secrets.GKE_CLUSTER}}
   GKE_ZONE: ${{ secrets.GKE_ZONE }}
 
