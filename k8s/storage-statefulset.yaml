@@ -39,7 +39,7 @@ kind: Service
 metadata:
   name: storage
 spec:
-  clusterIP: 34.118.224.5
+  clusterIP: LoadBalancer
   selector:
     app: web
   ports:
