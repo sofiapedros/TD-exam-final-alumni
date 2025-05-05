@@ -54,7 +54,7 @@ kind: Service
 metadata:
   name: my-storage
 spec:
-  clusterIP: my-service
+  clusterIP:  34.72.133.148
   selector:
     app: web
   ports:
