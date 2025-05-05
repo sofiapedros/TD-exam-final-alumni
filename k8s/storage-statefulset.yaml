@@ -39,7 +39,7 @@ kind: Service
 metadata:
   name: storage
 spec:
-  clusterIP: 34.118.234.152
+  clusterIP: 34.72.133.148
   selector:
     app: python-app
   ports:
