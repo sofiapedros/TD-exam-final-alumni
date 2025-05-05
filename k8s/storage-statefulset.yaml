@@ -39,7 +39,7 @@ kind: Service
 metadata:
   name: storage
 spec:
-  # clusterIP: my-service
+  clusterIP: 34.118.224.5
   selector:
     app: web
   ports:
