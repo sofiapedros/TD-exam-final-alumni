@@ -30,7 +30,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: 10.11.241.93
+
 spec:
   selector:
     app: web
