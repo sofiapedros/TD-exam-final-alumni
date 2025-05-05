@@ -22,7 +22,7 @@ spec:
           ports:
             - containerPort: 3000
           volumeMounts:
-            - name: GKEVolume
+            - name: storage-volume
               mountPath: /var/storage/
   volumeClaimTemplates:
     - metadata:
@@ -39,7 +39,7 @@ kind: Service
 metadata:
   name: storage
 spec:
-  clusterIP: 34.72.133.148
+  clusterIP:  34.118.224.0
   selector:
     app: python-app
   ports:
